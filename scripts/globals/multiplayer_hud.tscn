@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://ufhk58paaq0u"]
+
+[ext_resource type="Script" uid="uid://cwdgnqo6pgn47" path="res://scripts/globals/multiplayer_hud.gd" id="1_tfltc"]
+
+[node name="MultiplayerHUD" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 200.0
+offset_right = 310.0
+offset_bottom = 35.0
+script = ExtResource("1_tfltc")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 3.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HostGame" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "Host"
+
+[node name="JoinAsPlayer" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "Join a Game"

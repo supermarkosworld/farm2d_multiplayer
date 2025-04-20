@@ -1,0 +1,75 @@
+[gd_scene load_steps=11 format=3 uid="uid://cf5bmi6nhmcq7"]
+
+[ext_resource type="Texture2D" uid="uid://bgggu4grt6ui8" path="res://scenes/characters/cow/deer1_32_transplanted_sheet.png" id="1_rhes6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lyfes"]
+atlas = ExtResource("1_rhes6")
+region = Rect2(0, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rhty3"]
+atlas = ExtResource("1_rhes6")
+region = Rect2(96, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ugcdv"]
+atlas = ExtResource("1_rhes6")
+region = Rect2(192, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jb0nf"]
+atlas = ExtResource("1_rhes6")
+region = Rect2(288, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tf1qx"]
+atlas = ExtResource("1_rhes6")
+region = Rect2(384, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y5rk1"]
+atlas = ExtResource("1_rhes6")
+region = Rect2(480, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8sqgu"]
+atlas = ExtResource("1_rhes6")
+region = Rect2(576, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y55ho"]
+atlas = ExtResource("1_rhes6")
+region = Rect2(672, 0, 96, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wmny5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lyfes")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rhty3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ugcdv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jb0nf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tf1qx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y5rk1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8sqgu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y55ho")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Deer" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_wmny5")
+autoplay = "default"

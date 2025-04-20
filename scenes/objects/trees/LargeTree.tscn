@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dft380a6f7n7s"]
+
+[ext_resource type="Texture2D" uid="uid://bjrfgmhacd8mu" path="res://assets/game/objects/basic_grass_biom_things.png" id="1_kglcl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kglcl"]
+atlas = ExtResource("1_kglcl")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kglcl"]
+size = Vector2(7, 5)
+
+[node name="LargeTree" type="Sprite2D"]
+texture = SubResource("AtlasTexture_kglcl")
+region_enabled = true
+region_rect = Rect2(48, 0, 32, 32)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 11)
+shape = SubResource("RectangleShape2D_kglcl")

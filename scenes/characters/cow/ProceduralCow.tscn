@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://7lmeccjj00cu"]
+
+[ext_resource type="Shader" uid="uid://brc3ronk3ftvv" path="res://scenes/characters/cow/body_shader.gdshader" id="1_5hu4b"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hc72d"]
+shader = ExtResource("1_5hu4b")
+shader_parameter/body_color = Color(0.9, 0.8, 0.7, 1)
+shader_parameter/spot_color = Color(0.5, 0.4, 0.3, 1)
+shader_parameter/muzzle_color = Color(1, 0.8, 0.7, 1)
+shader_parameter/horn_color = Color(0.2, 0.2, 0.2, 1)
+shader_parameter/hoof_color = Color(0.3, 0.2, 0.15, 1)
+shader_parameter/spot_density = 0.3
+shader_parameter/spot_scale = 4.0
+shader_parameter/resolution = 32.0
+shader_parameter/pixel_scale = 1.0
+
+[node name="ProceduralCow" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_hc72d")
+offset_right = 32.0
+offset_bottom = 32.0

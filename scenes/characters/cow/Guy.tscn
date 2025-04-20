@@ -1,0 +1,75 @@
+[gd_scene load_steps=11 format=3 uid="uid://dns2miu7s3ej7"]
+
+[ext_resource type="Texture2D" uid="uid://djsrqdletpito" path="res://scenes/characters/cow/Fishing_Side-Sheet.png" id="1_5wsli"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jkthx"]
+atlas = ExtResource("1_5wsli")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pg8bh"]
+atlas = ExtResource("1_5wsli")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ewd4"]
+atlas = ExtResource("1_5wsli")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c23c1"]
+atlas = ExtResource("1_5wsli")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u18g4"]
+atlas = ExtResource("1_5wsli")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xvi71"]
+atlas = ExtResource("1_5wsli")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qalgo"]
+atlas = ExtResource("1_5wsli")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i1m40"]
+atlas = ExtResource("1_5wsli")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qvaa2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jkthx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pg8bh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ewd4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c23c1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u18g4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xvi71")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qalgo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i1m40")
+}],
+"loop": true,
+"name": &"fish_side",
+"speed": 3.0
+}]
+
+[node name="Guy" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_qvaa2")
+animation = &"fish_side"
+autoplay = "fish_side"
+frame_progress = 0.707802

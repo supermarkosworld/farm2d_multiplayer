@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://cns6rwxpe2vfm"]
+
+[ext_resource type="PackedScene" uid="uid://b7b3i1axxi2pt" path="res://scenes/ui/ToolsPanel.tscn" id="1_8hmcv"]
+[ext_resource type="PackedScene" uid="uid://ufhk58paaq0u" path="res://scripts/globals/multiplayer_hud.tscn" id="2_e2vrk"]
+
+[node name="GameScreen" type="CanvasLayer"]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ToolsPanel" parent="MarginContainer" instance=ExtResource("1_8hmcv")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+
+[node name="MultiplayerHUD" parent="." instance=ExtResource("2_e2vrk")]

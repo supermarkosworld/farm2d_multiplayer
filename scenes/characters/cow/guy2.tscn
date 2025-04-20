@@ -1,0 +1,76 @@
+[gd_scene load_steps=11 format=3 uid="uid://gcrtm2s7al1w"]
+
+[ext_resource type="Texture2D" uid="uid://b7cw5ju25godc" path="res://scenes/characters/cow/base_run_strip8.png" id="1_rot1p"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8lpw5"]
+atlas = ExtResource("1_rot1p")
+region = Rect2(0, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4lnt2"]
+atlas = ExtResource("1_rot1p")
+region = Rect2(96, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uyl0g"]
+atlas = ExtResource("1_rot1p")
+region = Rect2(192, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qkk8u"]
+atlas = ExtResource("1_rot1p")
+region = Rect2(288, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v5vbr"]
+atlas = ExtResource("1_rot1p")
+region = Rect2(384, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2vjfj"]
+atlas = ExtResource("1_rot1p")
+region = Rect2(480, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rdmn1"]
+atlas = ExtResource("1_rot1p")
+region = Rect2(576, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2be4l"]
+atlas = ExtResource("1_rot1p")
+region = Rect2(672, 0, 96, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x18cd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8lpw5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4lnt2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uyl0g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qkk8u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v5vbr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2vjfj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rdmn1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2be4l")
+}],
+"loop": true,
+"name": &"base_run",
+"speed": 5.0
+}]
+
+[node name="Guy2" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_x18cd")
+animation = &"base_run"
+autoplay = "base_run"
+frame = 4
+frame_progress = 0.105434

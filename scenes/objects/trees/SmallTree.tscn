@@ -1,0 +1,49 @@
+[gd_scene load_steps=10 format=3 uid="uid://cultn1rfiiy0y"]
+
+[ext_resource type="Texture2D" uid="uid://bjrfgmhacd8mu" path="res://assets/game/objects/basic_grass_biom_things.png" id="1_1i6im"]
+[ext_resource type="Shader" uid="uid://byxrbncshbom5" path="res://scenes/objects/trees/tree_shake.gdshader" id="1_f044a"]
+[ext_resource type="Script" uid="uid://d3dy8ofmhg5j7" path="res://scenes/components/hurt_component.gd" id="2_dfngi"]
+[ext_resource type="Script" uid="uid://3cq5mjpmf4tm" path="res://scenes/objects/trees/small_tree.gd" id="2_w545v"]
+[ext_resource type="Script" uid="uid://626tnlq0561f" path="res://scenes/components/damage_component.gd" id="4_f044a"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s3mqe"]
+shader = ExtResource("1_f044a")
+shader_parameter/shake_intensity = 0.0
+shader_parameter/shake_speed = 20.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dfngi"]
+atlas = ExtResource("1_1i6im")
+region = Rect2(-0.48148, -0.0740738, 16.4815, 32.0741)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oaf3d"]
+radius = 4.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w545v"]
+size = Vector2(6, 19)
+
+[node name="SmallTree" type="Sprite2D"]
+material = SubResource("ShaderMaterial_s3mqe")
+position = Vector2(0, -10)
+texture = SubResource("AtlasTexture_dfngi")
+script = ExtResource("2_w545v")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 8)
+shape = SubResource("CircleShape2D_oaf3d")
+
+[node name="DamageComponent" type="Node2D" parent="."]
+script = ExtResource("4_f044a")
+max_damage = 3
+metadata/_custom_type_script = "uid://626tnlq0561f"
+
+[node name="HurtComponent" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 8
+script = ExtResource("2_dfngi")
+metadata/_custom_type_script = "uid://d3dy8ofmhg5j7"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtComponent"]
+shape = SubResource("RectangleShape2D_w545v")
+debug_color = Color(0.832827, 0.00135748, 0.939127, 0.42)
