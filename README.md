@@ -1,6 +1,6 @@
 # farm2d_multiplayer
 
-A 2D farming game built in Godot Engine 4.3, integrating concepts from tutorials by Rapid Vectors and BatteryAcidDev to implement multiplayer functionality.
+A 2D farming game built in Godot Engine 4.4.1, integrating concepts from tutorials by Rapid Vectors and BatteryAcidDev to implement multiplayer functionality.
 
 ## Features Implemented
 
